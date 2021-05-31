@@ -9,8 +9,16 @@ b = float(input("nhập b ="))
 c = input("nhập c:")
 d = [a,b,c]
 n = (a, b, c, d)
+m = []
+for i in n:
+    if type(i) == list:
+        m.append(tuple(i))
+    else:
+        m.append(i)
+print(m)
+for j in set(m):
+    print(j)
 """
-
 
 # Bài 01. Viết chương trình chuyển một tuple sang thành list và ngược lại từ list sang tuple
 # Bài làm:
@@ -20,6 +28,8 @@ print(list(n))
 n1 = list(n)
 print(tuple(n1))
 """
+
+
 # Bài 02. Viết chương trình đảo ngược một tuple.
 # Bài làm:
 """
@@ -34,6 +44,8 @@ for i in n:
     n1.insert(0,i)
 print(tuple(n1))
 """
+
+
 # Bài 3:
 # ài 03. Viết chương trình đếm số lượng các phần tử trong một list đến khi gặp một phần tử kiểu tuple.
 # bài làm:
@@ -46,6 +58,8 @@ for i in n:
     else:
         print(dem)
 """
+
+
 # Bài 4:
 """
 Bài 04.
@@ -67,6 +81,8 @@ for i in x:
             y.insert(j + 1,i)
 print(y)
 """
+
+
 # Bài 05. Viết chương trình tìm ra tuple có phần tử thứ 2 là nhỏ nhất từ một list chứa các tuple.
 # Bài làm:
 """
@@ -77,6 +93,8 @@ for i in n:
         min = i
 print(min)
 """
+
+
 # Bài 6:
 # Bài 06. Viết chương trình in ra phần tử thứ 4 và phần tử thứ 4 từ cuối lên trong một tuple
 """
@@ -84,6 +102,8 @@ n = (1,2,3,"a", "b", "c")
 print(n[3])
 print(n[-4])
 """
+
+
 # Bài 7:
 # Bài 07. Viết chương trình kiểm tra 2 tuple có phần tử chung hay không.
 """
@@ -99,6 +119,8 @@ for i in range(len(n)):
         else:
             print("2 tuple không có phần tử chung")
 """
+
+
 # Bài 8:
 # Bài 08. Viết chương trình kiểm tra xem tất cả các phần tử trong tuple có giống nhau hay không.
 # Bài làm:
@@ -114,6 +136,8 @@ for i in range(len(n)):
         else:
             print("tất cả các phần tử của n giống nhau")
 """
+
+
 # Bài 09. Viết chương trình tính tổng và tìm giá trị lớn nhất trong tuple chứa các số thực
 """
 n = (1,2,3,1.2,5,8)
@@ -127,6 +151,8 @@ for i in n:
 print(tong)
 print(max)
 """
+
+
 #Bài 10:
 # Bài 10. Cho list sau: ["www.hust.edu.vn", "www.wikipedia.org", "www.asp.net", "www.amazon.com"]
 #    Viết chương trình để in ra hậu tố (vn, org, net, com) trong các tên miền website trong list trên.
@@ -143,6 +169,8 @@ for i in n:
             break
 print(m)
 """
+
+
 # Bài 11:
 # Bài 11. Viết chương trình tìm từ dài nhất trong một câu nhập vào từ bàn phím.
 """
