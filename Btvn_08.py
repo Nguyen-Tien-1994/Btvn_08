@@ -143,6 +143,25 @@ for i in n:
             break
 print(m)
 """
+# Bài 11:
+# Bài 11. Viết chương trình tìm từ dài nhất trong một câu nhập vào từ bàn phím.
+"""
+n = input("nhập n:")
+m = []
+a = -1
+for i in range(len(n)):
+    if n[i] == " ":
+        m.append(n[a+1:i])
+        a = i
+    elif i == len(n) - 1 :
+        m.append(n[a+1:len(n)])
+print(m)
+max_len = m[0]
+for j in m:
+    if len(j) > len(max_len):
+        max_len = len(j)
+print(max_len)
+"""
 
 
 
