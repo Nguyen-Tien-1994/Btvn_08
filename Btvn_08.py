@@ -77,8 +77,8 @@ for i in x:
             y.insert(0,i)
         elif y[j][len(y[j]) -1] > y[j][len(y[j]) -1]:
             y.append(i)
-        elif y[j][len(y[j]) -1] < i[len(i) -1] < y[j + 1][len(y[j]) -1]:
-            y.insert(j + 1,i)
+        elif y[j -1][len(y[j]) -1] < i[len(i) -1] < y[j][len(y[j]) -1]:
+            y.insert(j -1,i)
 print(y)
 """
 
@@ -189,6 +189,20 @@ for j in m:
     if len(j) > len(max_len):
         max_len = len(j)
 print(max_len)
+"""
+"""
+x = [(2,5),(4,1),(0,0),(4,6),(7,8)]
+y = [x[0]]
+for i in x[1:]:
+    if i[-1] < y[0][-1]:
+        y.insert(0,i)
+    elif i[-1] > y[-1][-1]:
+        y.append(i)
+    else:
+        for j in range(len(y)):
+            if y[j -1][-1] < i[-1] < y[j][-1]:
+                y.insert(j -1,i)
+print(y)
 """
 
 
