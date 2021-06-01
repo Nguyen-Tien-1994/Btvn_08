@@ -79,7 +79,7 @@ for i in x[1:]:
     else:
         for j in range(len(y)):
             if y[j -1][-1] < i[-1] < y[j][-1]:
-                y.insert(j -1,i)
+                y.insert(j,i)
 print(y)
 """
 
