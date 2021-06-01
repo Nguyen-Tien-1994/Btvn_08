@@ -69,16 +69,17 @@ Bài 04.
 """
 # Bài làm:
 """
-x = [(2,5),(4,1),(0,0),(4,6]
+x = [(2,5),(4,1),(0,0),(4,6),(7,8)]
 y = [x[0]]
-for i in x:
-    for j in range(len(y)):
-        if i[len(i) -1] < y[j][len(y[j]) -1]:
-            y.insert(0,i)
-        elif y[j][len(y[j]) -1] > y[j][len(y[j]) -1]:
-            y.append(i)
-        elif y[j -1][len(y[j]) -1] < i[len(i) -1] < y[j][len(y[j]) -1]:
-            y.insert(j -1,i)
+for i in x[1:]:
+    if i[-1] < y[0][-1]:
+        y.insert(0,i)
+    elif i[-1] > y[-1][-1]:
+        y.append(i)
+    else:
+        for j in range(len(y)):
+            if y[j -1][-1] < i[-1] < y[j][-1]:
+                y.insert(j -1,i)
 print(y)
 """
 
